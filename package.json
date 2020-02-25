@@ -1,0 +1,38 @@
+{
+  "name": "unicornagency.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "horseshoes": "^0.16.2",
+    "immer": "^5.3.6",
+    "lodash": "^4.17.15",
+    "next": "9.2.2",
+    "next-redux-wrapper": "^5.0.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
+    "uuid": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/preset-stage-2": "^7.8.3",
+    "@types/node": "^13.7.4",
+    "@types/react": "^16.9.22",
+    "@types/react-redux": "^7.1.7",
+    "@zeit/next-sass": "^1.0.1",
+    "css-loader": "^3.4.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "typescript": "^3.8.2",
+    "webpack": "^4.41.6"
+  }
+}
