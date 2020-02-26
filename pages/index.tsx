@@ -1,6 +1,8 @@
+import Header from "@/views/ui/Typography/Header"
+
 const Home = () => (
   <main>
-    <h1>Hello</h1>
+    <Header>Test</Header>
   </main>
 )
 
