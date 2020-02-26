@@ -1,0 +1,19 @@
+.toolbar.navigation {
+  @extend .shadow-100;
+  display: flex;
+  flex-flow: row nowrap;
+
+  nav {
+    display: flex;
+    padding: $s500 $s500;
+
+    a {
+      color: #fff;
+      font-size: $f400;
+
+      + a {
+        padding-left: $s500;
+      }
+    }
+  }
+}

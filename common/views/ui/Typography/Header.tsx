@@ -1,8 +1,9 @@
 import { FC, ReactNode, ReactType } from 'react'
+import { UIWeightOptions } from '../UI'
 
 export interface HeaderProps {
   Element?: ReactType
-  size?: '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900'
+  size?: UIWeightOptions
   children?: ReactNode
 }
 
