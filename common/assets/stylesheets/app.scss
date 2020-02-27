@@ -1,12 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900|Open+Sans+Condensed:300,700|Open+Sans:400,600,700,800&display=swap');
-@import 'var';
+@import '_var';
 
-@import '_reset';
-@import '_html';
-@import '_grid';
 @import '_colors';
-@import '_typography';
+@import '_grid';
+@import '_html';
 @import '_navigation';
+@import '_typography';
 @import '_ui';
-@import '_styleguide';
 
+#neue {
+  @include neue\_colors;
+  @include neue\_grid;
+  @include neue\_html;
+  @include neue\_navigation;
+  @include neue\_typography;
+  @include neue\_ui;
+}
+
+@import 'custom.scss';

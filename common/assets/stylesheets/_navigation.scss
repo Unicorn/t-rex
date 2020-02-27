@@ -1,18 +1,47 @@
-.toolbar.navigation {
-  @extend .shadow-100;
-  display: flex;
-  flex-flow: row nowrap;
+@mixin neue\_navigation {
+  .toolbar.navigation {
+    @extend .shadow-500;
+    
+    .row {
+      align-items: center;
+    }
 
-  nav {
-    display: flex;
-    padding: $s500 $s500;
+    nav {
+      display: flex;
 
-    a {
-      color: #fff;
-      font-size: $f400;
+      a {
+        border-bottom: 2px solid transparent;
+        color: #fff;
+        font-size: $f500;
+        padding: #{$s100 + $s500} 0 $s500;
 
-      + a {
-        padding-left: $s500;
+        + a {
+          margin-left: $s700;
+        }
+      }
+    }
+    
+    .logo {
+      fill: #fff;
+      height: $h300;
+      width: $h300;
+    }
+
+    a.active {
+      border-bottom: 2px solid #fff;
+    }
+
+    .left {
+      @extend .col-xs-12;
+      @extend .col-md-6;
+    } 
+    
+    .right {
+      @extend .col-xs-12;
+      @extend .col-md-6;
+
+      nav {
+        justify-content: flex-end;
       }
     }
   }

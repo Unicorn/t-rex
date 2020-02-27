@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900|Open+Sans+Condensed:300,700|Open+Sans:400,600,700,800&display=swap');
+
+
 $color-neutral-100: #CACFE7 !default;
 $color-neutral-200: #B0B5CE !default;
 $color-neutral-300: #9da2bc !default;
@@ -28,20 +31,24 @@ $color-secondary-700: #4FD9ED !default;
 $color-secondary-800: #3DD2E8 !default;
 $color-secondary-900: #31C7DE !default;
 
+$color-body: lighten($color-neutral-100, 12%) !default;
+
 /**
   SHADOWS
 **/
-$shadow-color: $color-neutral-900;
+$shadow-light: darken($color-body, 3%);
+$shadow-dark: darken($color-body, 6%);
+
 // box-shadow: -10px -10px 20px 0 #FAFBFF, 10px 10px 20px 0 #A6ABBD;
-$shadow-100: 0 2px 4px transparentize($shadow-color, 0.96), 0 0 1px transparentize($shadow-color, 0.94);
-$shadow-200: 0 3px 6px transparentize($shadow-color, 0.95), 0 1px 2px transparentize($shadow-color, 0.92);
-$shadow-300: 0 4px 8px transparentize($shadow-color, 0.95), 0 2px 4px transparentize($shadow-color, 0.9);
-$shadow-400: 0 5px 10px transparentize($shadow-color, 0.9), 0 3px 6px transparentize($shadow-color, 0.9);
-$shadow-500: 0 6px 12px transparentize($shadow-color, 0.9), 0 4px 8px transparentize($shadow-color, 0.9);
-$shadow-600: 0 7px 14px transparentize($shadow-color, 0.9), 0 5px 10px transparentize($shadow-color, 0.9);
-$shadow-700: 0 8px 16px transparentize($shadow-color, 0.9), 0 6px 12px transparentize($shadow-color, 0.9);
-$shadow-800: 0 9px 18px transparentize($shadow-color, 0.9), 0 7px 14px transparentize($shadow-color, 0.9);
-$shadow-900: 0 10px 20px transparentize($shadow-color, 0.9), 0 8px 16px transparentize($shadow-color, 0.9);
+$shadow-100: -2px -2px 4px $shadow-light, 2px 2px 4px $shadow-dark;
+$shadow-200: -4px -4px 6px $shadow-light, 4px 4px 6px $shadow-dark;
+$shadow-300: -6px -6px 8px $shadow-light, 6px 6px 8px $shadow-dark;
+$shadow-400: -8px -8px 10px $shadow-light, 8px 8px 10px $shadow-dark;
+$shadow-500: -10px -10px 12px $shadow-light, 10px 10px 12px $shadow-dark;
+$shadow-600: -12px -12px 14px $shadow-light, 12px 12px 14px $shadow-dark;
+$shadow-700: -14px -14px 16px $shadow-light, 14px 14px 16px $shadow-dark;
+$shadow-800: -16px -16px 18px $shadow-light, 16px 16px 18px $shadow-dark;
+$shadow-900: -18px -18px 20px $shadow-light, 18px 18px 20px $shadow-dark;
 
 $font-header: 'Nunito', serif !default;
 $font-body: 'Open Sans', sans-serif !default;
@@ -110,7 +117,7 @@ $s700: 3.4rem !default;
 $s800: 5.5rem !default;
 $s900: 8.9rem !default;
 
-%wrapper {
+%container {
   margin: 0 auto;
   max-width: 120rem;
 }

@@ -1,75 +1,77 @@
-h1, h2, h3, h4, h5, h6, .header {
-  display: block;
-  font-family: $font-header;
-  line-height: 1.5;
-  padding: $s600 0 $s300;
-}
+@mixin neue\_typography {
+  h1, h2, h3, h4, h5, h6, .header {
+    display: block;
+    font-family: $font-header;
+    line-height: 1.5;
+    padding: $s600 0 $s300;
+  }
 
-h1 {
-  @extend .h900;
-}
+  h1 {
+    @extend .h900;
+  }
 
-h2 {
-  @extend .h800;
-}
+  h2 {
+    @extend .h800;
+  }
 
-h3 {
-  @extend .h700;
-}
+  h3 {
+    @extend .h700;
+  }
 
-h4 {
-  @extend .h600;
-}
+  h4 {
+    @extend .h600;
+  }
 
-h5 {
-  @extend .h500;
-}
+  h5 {
+    @extend .h500;
+  }
 
-h6 {
-  @extend .h400;
-}
+  h6 {
+    @extend .h400;
+  }
 
-p {
-  @extend .h100;
-  line-height: 1.75;
-  padding: $s300 0;
-}
+  p {
+    @extend .h100;
+    line-height: 1.75;
+    padding: $s300 0;
+  }
 
-// 
-// Font Size Modifiers
-// 
-.h100 {
-  font-size: $h100;
-}
+  // 
+  // Font Size Modifiers
+  // 
+  .h100 {
+    font-size: $h100;
+  }
 
-.h200 {
-  font-size: $h200;
-}
+  .h200 {
+    font-size: $h200;
+  }
 
-.h300 {
-  font-size: $h300;
-}
+  .h300 {
+    font-size: $h300;
+  }
 
-.h400 {
-  font-size: $h400;
-}
+  .h400 {
+    font-size: $h400;
+  }
 
-.h500 {
-  font-size: $h500;
-}
+  .h500 {
+    font-size: $h500;
+  }
 
-.h600 {
-  font-size: $h600;
-}
+  .h600 {
+    font-size: $h600;
+  }
 
-.h700 {
-  font-size: $h700;
-}
+  .h700 {
+    font-size: $h700;
+  }
 
-.h800 {
-  font-size: $h800;
-}
+  .h800 {
+    font-size: $h800;
+  }
 
-.h900 {
-  font-size: $h900;
+  .h900 {
+    font-size: $h900;
+  }
 }

@@ -1,0 +1,29 @@
+/**
+  STYLEGUIDE
+**/
+.styleguide {
+  padding: $s700 0;
+
+  .element {
+    background: $color-secondary-500;
+    border-radius: 2px;
+    font-size: $h100;
+    font-weight: 700;
+    color: darken($color-secondary-500, 45%);
+    min-height: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+
+    &.large {
+      min-height: 6rem;   
+    }
+
+    .element {
+      background: darken($color-secondary-500, 20%);
+      border: 3px solid $color-secondary-500;
+      margin: 0;
+      padding: 1rem;
+    }
+  }
+}

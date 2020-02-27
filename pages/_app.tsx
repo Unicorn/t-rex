@@ -2,7 +2,7 @@ import { Provider } from 'react-redux'
 import withRedux from 'next-redux-wrapper'
 import App from 'next/app'
 
-import Main from '@/containers/Main'
+import Main from '@/views/custom/Main'
 import Meta from '@/containers/Meta'
 import { nextStore } from '@/controllers/reduxController'
 
@@ -20,7 +20,7 @@ class RootApp extends App<Props> {
     return (
       <Provider store={store}>
         <Meta>
-          <title>Unicorn.TV</title>
+          <title>Neue UI</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Meta>
 
