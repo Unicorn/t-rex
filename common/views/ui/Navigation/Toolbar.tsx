@@ -30,15 +30,13 @@ const Toolbar: FC<Props> = ({ children, color = defaultProps.color, constrained 
 
   return (
     <header className={classes.join(' ')}>
-      <div className={constrained ? 'container' : ''}>
-        <div className="row">
-          <div className="left">
-            {children.left && children.left.component}
-          </div>
+      <div className={constrained ? 'container row' : 'row'}>
+        <div className="left">
+          {children.left && children.left.component}
+        </div>
 
-          <div className="right">
-            {children.right && children.right.component}
-          </div>
+        <div className="right">
+          {children.right && children.right.component}
         </div>
       </div>
     </header>

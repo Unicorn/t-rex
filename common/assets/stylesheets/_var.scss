@@ -55,12 +55,18 @@ $font-body: 'Open Sans', sans-serif !default;
 $font-display: 'Open Sans Condensed', cursive !default;
 
 /**
-  GRID
+  LAYOUT
+
   Define the column count, gutters, margins, and breakpoints
+  Fibonacci Sequence is ideal: 21 max with with 1, 2, 3, 5, 8, 13 columns.
 **/
-$grid-columns: 12 !default;
-$grid-gutter: 1rem !default;
-$grid-breakpoints: sm 48em 46rem, md 62em 61rem, lg 75em 71rem !default; // <name> <breakpoint> <width>,
+$breakpoints: (
+  sm: 400px,
+  md: 768px,
+  lg: 1024px
+);
+$grid-columns: 21 !default;
+$grid-gutter: 1.3rem !default;
 
 
 /**
@@ -91,6 +97,7 @@ $f900: 2.5rem;
 
 /**
   HEIGHT
+
   Used for Headers, Icons, etc
 **/ 
 $h100: 1.8rem !default;
@@ -105,6 +112,7 @@ $h900: 4.2rem !default;
 
 /** 
   SPACE
+
   Fibonacci sequence. Used for padding, margins
 **/ 
 $s100: 0.2rem !default;
@@ -120,4 +128,5 @@ $s900: 8.9rem !default;
 %container {
   margin: 0 auto;
   max-width: 120rem;
+  padding: 0 $s500;
 }

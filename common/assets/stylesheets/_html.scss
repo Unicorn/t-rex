@@ -19,7 +19,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html, body {
 	background-color: $color-body;
-  font: 10px/1 $font-body;
+  font: 500 10px/1 $font-body;
 }
 
 ol, ul {
@@ -64,9 +64,21 @@ h1, h2, h3, h4, h5, h6, p {
 @mixin neue\_html {
   main, .container {
     @extend %container;
-  }
+	}
+	
+	dl, ol, ul {
+		padding: $s600 0;
+	}
 
   a {
     text-decoration: none;
-  }
+	}
+	
+	dt {
+		font-weight: 700;
+	}
+
+	dd + dt {
+		padding-top: $s500;
+	}
 }

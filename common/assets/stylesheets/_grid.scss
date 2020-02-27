@@ -15,6 +15,9 @@ $gutter-half: $grid-gutter * .5;
     display: flex;
     flex: 0 1 auto;
     flex-flow: row wrap;
+  }
+
+  .row:not(.container) {
     margin-right: $gutter-remove;
     margin-left: $gutter-remove;
   }
@@ -102,15 +105,13 @@ $gutter-half: $grid-gutter * .5;
   }
 
 
-  @each $breakpoint in $grid-breakpoints {
-    $name: nth($breakpoint, 1);
-    $size: nth($breakpoint, 2);
-    $container: nth($breakpoint, 3);
+  @each $name, $size in $breakpoints {
     @media only screen and (min-width: $size) {
       .col-#{$name} {
         @include flexboxgrid-sass-col-common;
         flex-basis: auto;
       }
+
       @for $i from 1 through $grid-columns {
         .col-#{$name}-#{$i} {
           @include flexboxgrid-sass-col-common;
@@ -118,6 +119,7 @@ $gutter-half: $grid-gutter * .5;
           max-width: 100% / $grid-columns * $i;
         }
       }
+
       @for $i from 0 through $grid-columns {
         .col-#{$name}-offset-#{$i} {
           @include flexboxgrid-sass-col-common;
@@ -128,11 +130,13 @@ $gutter-half: $grid-gutter * .5;
           }
         }
       }
+
       .col-#{$name} {
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
       }
+
       .start-#{$name} {
         justify-content: flex-start;
         text-align: left;

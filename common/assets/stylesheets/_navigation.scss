@@ -3,7 +3,7 @@
     @extend .shadow-500;
     
     .row {
-      align-items: center;
+      @extend .middle-xs;
     }
 
     nav {
@@ -32,13 +32,13 @@
     }
 
     .left {
-      @extend .col-xs-12;
-      @extend .col-md-6;
+      @extend .col-xs-21;
+      @extend .col-sm-5;
     } 
     
     .right {
-      @extend .col-xs-12;
-      @extend .col-md-6;
+      @extend .col-xs-21;
+      @extend .col-sm-16;
 
       nav {
         justify-content: flex-end;
