@@ -3,12 +3,14 @@ import createSagaMiddleware from 'redux-saga'
 import { alertReducer } from 'horseshoes'
 
 import { rootSaga } from '@/controllers/sagaController'
+import { settingReducer } from '@/controllers/settingController'
 import { initialState, RootState } from '@/models/app'
 
 // typeof window !== 'undefined' && window && (<any>window).__REDUX_DEVTOOLS_EXTENSION__ && (<any>window).__REDUX_DEVTOOLS_EXTENSION__()
 
 const rootReducer = combineReducers<RootState>({
   alerts: alertReducer,
+  settings: settingReducer,
 } as any)
 
 const composeEnhancers =

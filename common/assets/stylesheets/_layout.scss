@@ -1,0 +1,14 @@
+/**
+  LAYOUT
+**/
+@mixin neue\_layout {
+  .layout {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .fixed-height {
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}

@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900|Open+Sans+Condensed:300,700|Open+Sans:400,600,700,800&display=swap');
+@import '_mixins';
 
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900|Open+Sans+Condensed:300,700|Open+Sans:400,600,700,800&display=swap');
 
 $color-neutral-100: #CACFE7 !default;
 $color-neutral-200: #B0B5CE !default;
@@ -21,15 +22,15 @@ $color-primary-700: #6053D5 !default;
 $color-primary-800: #574BC5 !default;
 $color-primary-900: #4A40A9 !default;
 
-$color-secondary-100: #DDFBFF !default;
-$color-secondary-200: #C8F8FF !default;
-$color-secondary-300: #A0F3FF !default;
-$color-secondary-400: #7DEEFF !default;
-$color-secondary-500: #4DE8FF !default;
-$color-secondary-600: #42E2FA !default;
-$color-secondary-700: #4FD9ED !default;
-$color-secondary-800: #3DD2E8 !default;
-$color-secondary-900: #31C7DE !default;
+$color-secondary-100: #ffe2bf !default;
+$color-secondary-200: #f8cd99 !default;
+$color-secondary-300: #f4c489 !default;
+$color-secondary-400: #f1bd7d !default;
+$color-secondary-500: #ebb068 !default;
+$color-secondary-600: #dea55f !default;
+$color-secondary-700: #d59a53 !default;
+$color-secondary-800: #c58e4b !default;
+$color-secondary-900: #a97a40 !default;
 
 $color-body: lighten($color-neutral-100, 12%) !default;
 
@@ -49,6 +50,13 @@ $shadow-600: -12px -12px 14px $shadow-light, 12px 12px 14px $shadow-dark;
 $shadow-700: -14px -14px 16px $shadow-light, 14px 14px 16px $shadow-dark;
 $shadow-800: -16px -16px 18px $shadow-light, 16px 16px 18px $shadow-dark;
 $shadow-900: -18px -18px 20px $shadow-light, 18px 18px 20px $shadow-dark;
+
+/**
+  DRAWER
+**/
+$drawer-background: $color-primary-500;
+$drawer-collapsed-width: 5.5rem;
+$drawer-expanded-width: 25rem;
 
 $font-header: 'Nunito', serif !default;
 $font-body: 'Open Sans', sans-serif !default;
@@ -89,8 +97,8 @@ $f100: 1.0rem;
 $f200: 1.2rem;
 $f300: 1.3rem;
 $f400: 1.4rem;
-$f500: 1.5rem;
-$f600: 1.7rem;
+$f500: 1.6rem;
+$f600: 1.8rem;
 $f700: 2.0rem;
 $f800: 2.2rem;
 $f900: 2.5rem;
@@ -122,11 +130,11 @@ $s400: 0.8rem !default;
 $s500: 1.3rem !default;
 $s600: 2.1rem !default;
 $s700: 3.4rem !default;
-$s800: 5.5rem !default;
-$s900: 8.9rem !default;
+$s800: 6rem !default;
+$s900: 9rem !default;
 
 %container {
   margin: 0 auto;
   max-width: 120rem;
-  padding: 0 $s500;
+  padding: 0 $s800;
 }

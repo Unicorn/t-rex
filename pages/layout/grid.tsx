@@ -1,8 +1,8 @@
 import Header from "@/views/ui/Typography/Header";
 
 export default () => (
-  <main className="styleguide">
-    <section>
+  <section className="styleguide">
+    <div>
       <Header Element="h1" size="900">The Grid</Header>
       <p>
         The neue grid is highly opinionated and may go against other design paradigms you have seen.
@@ -32,9 +32,9 @@ export default () => (
           These modifiers make sorting and alignment a breeze and almost all of them can be constrained by different breakpoints.
         </dd>
       </dl>
-    </section>
+    </div>
 
-    <section className="row between-xs bottom-xs">
+    <div className="row between-xs bottom-xs">
       <div className="col-xs-21 col-lg-8">
         <h2>Responsive and Fluid</h2>
         <p>
@@ -94,9 +94,9 @@ export default () => (
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section className="row between-xs bottom-xs">
+    <div className="row between-xs bottom-xs">
       <div className="col-xs-21 col-lg-12">
         <h2>Offset or Auto</h2>
         <p>
@@ -189,9 +189,9 @@ export default () => (
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section className="row between-xs bottom-xs">
+    <div className="row between-xs bottom-xs">
       <div className="col-xs-21 col-lg-8">
         <h2>Alignment</h2>
         <p>
@@ -320,9 +320,9 @@ export default () => (
         </div>
 
       </div>
-    </section>
+    </div>
 
-    <section className="row between-xs bottom-xs">
+    <div className="row between-xs bottom-xs">
       <div className="col-xs-21 col-lg-12">
         <h2>Reordering</h2>
         <p>
@@ -384,6 +384,6 @@ export default () => (
           </div>
         </div>
       </div>
-    </section>
-  </main >
+    </div>
+  </section>
 )

@@ -17,26 +17,19 @@ export interface Props {
   constrained?: boolean
 }
 
-export const defaultProps: Props = {
-  color: {
-    hue: 'neutral',
-    weight: '500'
-  }
-}
-
-const Toolbar: FC<Props> = ({ children, color = defaultProps.color, constrained }) => {
+const Toolbar: FC<Props> = ({ children, color, constrained }) => {
   let classes = ['toolbar', 'navigation']
-  classes = classes.concat(['bg', color.hue, `c${color.weight}`])
+  classes = classes.concat(['bg', color && color.hue || 'neutral', `c${color && color.weight || 500}`])
 
   return (
     <header className={classes.join(' ')}>
       <div className={constrained ? 'container row' : 'row'}>
         <div className="left">
-          {children.left && children.left.component}
+          {children && children.left && children.left.component}
         </div>
 
         <div className="right">
-          {children.right && children.right.component}
+          {children && children.right && children.right.component}
         </div>
       </div>
     </header>

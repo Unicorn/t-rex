@@ -1,0 +1,8 @@
+@mixin neue\_base {
+  .content {
+    flex: 1;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+  }
+}

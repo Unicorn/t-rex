@@ -65,20 +65,32 @@ h1, h2, h3, h4, h5, h6, p {
   main, .container {
     @extend %container;
 	}
-	
-	dl, ol, ul {
-		padding: $s600 0;
-	}
 
-  a {
-    text-decoration: none;
-	}
-	
-	dt {
-		font-weight: 700;
-	}
+	.content {
+		dl, ol, ul {
+			padding: $s600 0;
+		}
 
-	dd + dt {
-		padding-top: $s500;
+		a {
+			text-decoration: none;
+		}
+		
+		dt {
+			font-weight: 700;
+		}
+
+		dd + dt {
+			padding-top: $s500;
+		}
+
+		pre {
+			background-color: transparentize($color-neutral-500, 0.95);
+			border-left: 2px solid $color-neutral-500;
+			color: $color-neutral-600;
+			font-size: $s500;
+			line-height: 1.5em;
+			margin: 0 0 $s500 0;
+			padding: $s300;
+		}
 	}
 }
