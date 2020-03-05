@@ -1,26 +1,61 @@
 import { ReactNode, FC } from "react"
-import { UIWeightOptions } from "../UI"
+
+import { UISizeOptions, UIColor } from "../UI"
+import { paddingClass, radiusClass, shadowClass, bgColorClass } from "@/helpers/classHelper"
+import { hasNamedChildren } from "@/helpers/rendererHelper"
+
+interface ChildrenObject {
+  head?: {
+    color?: UIColor
+    component: ReactNode
+    padding?: UISizeOptions
+  },
+  main?: {
+    color?: UIColor
+    component: ReactNode
+    padding?: UISizeOptions
+  },
+  foot?: {
+    color?: UIColor,
+    component: ReactNode
+    padding?: UISizeOptions
+  }
+}
 
 export interface Props {
-  children?: ReactNode
+  children?: ReactNode | ChildrenObject
   className?: string
-  padding?: UIWeightOptions
-  radius?: UIWeightOptions
-  shadow?: UIWeightOptions
+  color?: UIColor
+  padding?: UISizeOptions
+  radius?: UISizeOptions
+  shadow?: UISizeOptions
   type?: 'info'
 }
 
-const Tile: FC<Props> = ({ children, className, padding, radius, shadow, type = 'info' }) => {
-  let classes = ['tile', type, className]
-  if (padding) classes.push(`padding-${padding}`)
-  if (radius) classes.push(`radius-${radius}`)
-  if (shadow) classes.push(`shadow-${shadow}`)
+const Tile: FC<Props> = ({ children, className, color, padding, radius, shadow, type }) => {
+  const baseClass = `tile ${type} ${className || ''}`
+
+  if (hasNamedChildren<ChildrenObject>(children)) {
+    const { head, main, foot } = children as ChildrenObject
+
+    return (
+      <div className={`${baseClass} ${radiusClass(radius)} ${shadowClass(shadow)}`}>
+        {head && <header className={`head ${paddingClass(head.padding)} ${bgColorClass(head.color)}`}>{head.component}</header>}
+        {main && <div className={`main ${paddingClass(main.padding)} ${bgColorClass(main.color)}`}>{main.component}</div>}
+        {foot && <div className={`foot ${paddingClass(foot.padding)} ${bgColorClass(foot.color)}`}>{foot.component}</div>}
+      </div>
+    )
+  }
 
   return (
-    <div className={classes.join(' ')}>
-      {children}
+    <div className={`${baseClass} basic ${paddingClass(padding)} ${radiusClass(radius)} ${shadowClass(shadow)} ${bgColorClass(color)}`}>
+      <div className="main">{children}</div>
     </div>
   )
+}
+
+Tile.defaultProps = {
+  type: 'info'
 }
 
 export default Tile

@@ -1,12 +1,12 @@
 import { ReactNode, FC } from "react"
-import { UIWeightOptions } from "../UI"
+import { UISizeOptions } from "../UI"
 
 export interface Props {
   children?: ReactNode
   className?: string
-  padding?: UIWeightOptions
-  radius?: UIWeightOptions
-  shadow?: UIWeightOptions
+  padding?: UISizeOptions
+  radius?: UISizeOptions
+  shadow?: UISizeOptions
 }
 
 const Code: FC<Props> = ({ children, className, padding, radius, shadow }) => {

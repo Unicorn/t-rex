@@ -1,9 +1,6 @@
-import { APP_NAME } from './app'
 
-export const SETTING = {
-  DRAWER: {
-    TOGGLE: `${APP_NAME}/settings/TOGGLE_DRAWER`
-  }
+export enum SETTING {
+  DRAWER_TOGGLE = 'neue/settings/DRAWER_TOGGLE'
 }
 
 export interface Drawer {
@@ -21,6 +18,6 @@ export type Setting = Drawer
 export interface Settings extends Drawers { }
 
 export interface SettingsAction {
-  type: string
+  type: SETTING
   payload?: Setting
 }

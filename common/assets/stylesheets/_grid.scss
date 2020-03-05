@@ -5,8 +5,6 @@ $gutter-half: $grid-gutter * .5;
   box-sizing: border-box;
   flex-grow: 0;
   flex-shrink: 0;
-  padding-right: $gutter-half;
-  padding-left: $gutter-half;
 }
 
 @mixin neue\_grid {
@@ -15,11 +13,6 @@ $gutter-half: $grid-gutter * .5;
     display: flex;
     flex: 0 1 auto;
     flex-flow: row wrap;
-  }
-
-  .row:not(.container) {
-    margin-right: $gutter-remove;
-    margin-left: $gutter-remove;
   }
 
   .row.reverse {

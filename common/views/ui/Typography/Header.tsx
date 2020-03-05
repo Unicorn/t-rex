@@ -1,16 +1,21 @@
 import { FC, ReactNode, ReactType } from 'react'
-import { UIWeightOptions } from '../UI'
+import { UISizeOptions } from '../UI'
 
 export interface HeaderProps {
   Element?: ReactType
-  size?: UIWeightOptions
+  size?: UISizeOptions
   children?: ReactNode
 }
 
-const Header: FC<HeaderProps> = ({ Element = 'span', size = 500, children }) => (
+const Header: FC<HeaderProps> = ({ Element, size, children }) => (
   <Element className={`header h${size}`}>
     {children}
   </Element>
 )
+
+Header.defaultProps = {
+  Element: 'span',
+  size: '500'
+}
 
 export default Header

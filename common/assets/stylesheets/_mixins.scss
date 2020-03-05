@@ -1,12 +1,3 @@
-// @mixin breakpoint($point) {
-//   @if $point == lg {
-//     @media (min-width: $breakpoints(lg)) { @content ; }
-//   }
-//   @else {
-//     @media (max-width: map-get($breakpoints, $point))  { @content ; }
-//   }
-// }
-
 @mixin breakpoint($breakpoint, $direction) {
   @if map-has-key($breakpoints, $breakpoint) {
     $breakpoint-value: map-get($breakpoints, $breakpoint);
@@ -38,5 +29,19 @@
         @content
       }
     }
+  }
+}
+
+@mixin button($color) {
+  background: color($color, 500);
+
+  &.basic {
+    color: color($color, 900);
+  }
+
+  &:hover {
+    background: color($color, 900);
+    border-color: color($color, 900);
+    color: #fff;
   }
 }

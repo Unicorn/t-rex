@@ -18,7 +18,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 html, body {
-	background-color: $color-body;
+	background-color: $color-background;
+	color: $color-text;
   font: 500 10px/1 $font-body;
 }
 
@@ -63,10 +64,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 @mixin neue\_html {
   main, .container {
-    @extend %container;
+		@extend %container;
 	}
 
-	.content {
+	section.content {
 		dl, ol, ul {
 			padding: $s600 0;
 		}

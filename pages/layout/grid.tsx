@@ -49,49 +49,27 @@ export default () => (
 
       <div className="preview col-xs-21 col-lg-12">
         <div className="row">
-          <div className="col-xs-21">
-            <div className="element"></div>
-          </div>
+          <div className="col-xs-21 element" />
         </div>
         <div className="row">
-          <div className="col-xs-20 col-md-1">
-            <div className="element"></div>
-          </div>
-          <div className="col-xs-1 col-md-20">
-            <div className="element"></div>
-          </div>
+          <div className="col-xs-20 col-md-1 element" />
+          <div className="col-xs-1 col-md-20 element" />
         </div>
         <div className="row">
-          <div className="col-xs-19 col-md-2">
-            <div className="element"></div>
-          </div>
-          <div className="col-xs-2 col-md-19">
-            <div className="element"></div>
-          </div>
+          <div className="col-xs-19 col-md-2 element" />
+          <div className="col-xs-2 col-md-19 element" />
         </div>
         <div className="row">
-          <div className="col-xs-18 col-md-3">
-            <div className="element"></div>
-          </div>
-          <div className="col-xs-3 col-md-18">
-            <div className="element"></div>
-          </div>
+          <div className="col-xs-18 col-md-3 element" />
+          <div className="col-xs-3 col-md-18 element" />
         </div>
         <div className="row">
-          <div className="col-xs-16 col-md-5">
-            <div className="element"></div>
-          </div>
-          <div className="col-xs-5 col-md-16">
-            <div className="element"></div>
-          </div>
+          <div className="col-xs-16 col-md-5 element" />
+          <div className="col-xs-5 col-md-16 element" />
         </div>
         <div className="row">
-          <div className="col-xs-13 col-md-8">
-            <div className="element"></div>
-          </div>
-          <div className="col-xs-8 col-md-13">
-            <div className="element"></div>
-          </div>
+          <div className="col-xs-13 col-md-8 element" />
+          <div className="col-xs-8 col-md-13 element" />
         </div>
       </div>
     </div>

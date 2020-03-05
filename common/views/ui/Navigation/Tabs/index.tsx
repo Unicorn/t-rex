@@ -1,11 +1,11 @@
 import { FC, ReactNode } from "react"
-import { UIColorOptions, UIWeightOptions } from "../../UI"
+import { UIColorOptions, UISizeOptions } from "../../UI"
 
 export interface Props {
   children?: ReactNode
   color?: {
     hue?: UIColorOptions
-    weight?: UIWeightOptions
+    weight?: UISizeOptions
   }
 }
 

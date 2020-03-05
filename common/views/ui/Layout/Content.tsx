@@ -1,12 +1,12 @@
 import { ReactNode, FC } from "react"
-import { UIWeightOptions } from "../UI"
+import { UISizeOptions } from "../UI"
 
 export interface Props {
   children?: ReactNode
   className?: string
-  padding?: UIWeightOptions
-  radius?: UIWeightOptions
-  shadow?: UIWeightOptions
+  padding?: UISizeOptions
+  radius?: UISizeOptions
+  shadow?: UISizeOptions
 }
 
 const Content: FC<Props> = ({ children, className, padding, radius, shadow }) => {
@@ -16,9 +16,9 @@ const Content: FC<Props> = ({ children, className, padding, radius, shadow }) =>
   if (shadow) classes.push(`shadow-${shadow}`)
 
   return (
-    <div className={classes.join(' ')}>
+    <section className={classes.join(' ')}>
       {children}
-    </div>
+    </section>
   )
 }
 

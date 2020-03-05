@@ -10,6 +10,7 @@ import LayoutIcon from '@/assets/images/icons/layout.svg'
 import Logo from '@/assets/images/neue-ui-logo.svg'
 import { routes } from '@/config/routes'
 import Drawer from '@/views/ui/Navigation/Drawer'
+import Content from '../ui/Layout/Content'
 
 interface Props {
   children?: ReactNode
@@ -78,10 +79,10 @@ class Main extends Component<Props & WithRouterProps> {
             }}
           </Drawer>
 
-          <div className="content">
+          <main className="fixed-height">
             <UI.alerts />
-            <main className="fixed-height">{children}</main>
-          </div>
+            <Content>{children}</Content>
+          </main>
         </div>
       </div>
     )

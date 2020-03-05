@@ -49,7 +49,7 @@
 
   .drawer.navigation {
     animation: drawerExpand .8s ease-in-out;
-    border-right: .5 solid $color-body;
+    border-right: .5rem solid $color-background;
     left: 0;
     position: relative;
     width: $drawer-expanded-width; 
@@ -68,7 +68,7 @@
       width: $drawer-collapsed-width;
 
       .arrow_svg__cutout {
-        fill: $color-body;
+        fill: $color-background;
       }
 
       .arrow_svg__circle {

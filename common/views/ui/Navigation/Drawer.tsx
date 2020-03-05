@@ -2,9 +2,10 @@ import { FC, ReactNode, SyntheticEvent } from "react"
 import { get } from 'lodash'
 import { connect } from 'react-redux'
 
-import { UIColorOptions, UIWeightOptions } from "../UI"
+import { UIColorOptions, UIColor } from "../UI"
 import { drawerToggle } from "@/controllers/settingController"
 import { RootState } from '@/models/app'
+import { bgColorClass } from "@/helpers/classHelper"
 
 export interface Props {
   identifier: string
@@ -20,10 +21,7 @@ export interface Props {
       component: ReactNode
     }
   }
-  color?: {
-    hue?: UIColorOptions
-    weight?: UIWeightOptions
-  }
+  color?: UIColor
 }
 
 export interface Connected {
@@ -35,9 +33,10 @@ export interface Actions {
 }
 
 const Drawer: FC<Props & Connected & Actions> = ({ identifier, children, color, collapse, _drawerToggle }) => {
-  let classes = ['drawer', 'navigation']
-  classes.push(`bg ${get(color, 'hue', 'neutral')} c${get(color, 'weight', '500')}`)
-  classes.push(collapse ? 'collapse' : '')
+  let classes = ['drawer', 'navigation', 'section', bgColorClass(color)]
+
+  if (collapse)
+    classes.push('collapse')
 
   const __drawerToggle = (e: SyntheticEvent<HTMLButtonElement>) => {
     _drawerToggle(identifier, !collapse)
@@ -54,7 +53,7 @@ const Drawer: FC<Props & Connected & Actions> = ({ identifier, children, color, 
   }
 
   return (
-    <div className={classes.join(' ')}>
+    <aside className={classes.join(' ')}>
       <header className="head">
         {children && children.head && children.head.component}
       </header>
@@ -64,7 +63,7 @@ const Drawer: FC<Props & Connected & Actions> = ({ identifier, children, color, 
       <div className="main">
         {children && children.main && children.main.component}
       </div>
-    </div>
+    </aside>
   )
 }
 

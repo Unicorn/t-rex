@@ -1,4 +1,13 @@
 @mixin neue\_animations {
+  .animate.fade-in {
+    opacity: 0;
+    transition: opacity .2s;
+  
+    &.appear {
+      opacity: 1;
+    }
+  }
+  
   @keyframes drawerExpand {
     from {
       left: -#{$drawer-expanded-width - $drawer-collapsed-width};
