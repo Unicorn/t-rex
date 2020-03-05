@@ -49,7 +49,7 @@ const Tile: FC<Props> = ({ children, className, color, padding, radius, shadow, 
 
   return (
     <div className={`${baseClass} basic ${paddingClass(padding)} ${radiusClass(radius)} ${shadowClass(shadow)} ${bgColorClass(color)}`}>
-      <div className="main">{children}</div>
+      {children}
     </div>
   )
 }

@@ -45,8 +45,6 @@
     }
 
     .layout.example {
-      background: lighten($color-background, 15%);
-      
       aside.drawer, section.content {
         min-height: 20rem;
       }

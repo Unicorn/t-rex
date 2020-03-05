@@ -9,7 +9,7 @@ export default () => (
   <section className="styleguide elements">
     <Header size="900" Element="h1">Layout</Header>
 
-    <Tile className="layout example">
+    <Tile className="layout example" color={{ hue: 'neutral', weight: '100' }}>
       <Drawer identifier="layoutExample" />
       <Content>
         <Toolbar constrained={true} />

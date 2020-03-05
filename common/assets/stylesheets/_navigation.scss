@@ -1,6 +1,5 @@
 @mixin neue\_navigation {
   .toolbar.navigation {
-    @extend .shadow-500;
     min-height: $h500;
     
     .row {
