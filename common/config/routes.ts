@@ -1,18 +1,56 @@
-export const routes = {
+import { FC } from 'react'
+
+import StyleguideIcon from '@/assets/images/icons/design.svg'
+import ExamplesIcon from '@/assets/images/icons/examples.svg'
+import LayoutIcon from '@/assets/images/icons/layout.svg'
+
+interface Routes {
+  [key: string]: {
+    [key: string]: {
+      path: string
+      icon?: FC
+    }
+  }
+}
+
+export const routes: Routes = {
   layout: {
-    index: '/layout',
-    grid: '/layout/grid',
-    tiles: '/layout/tiles',
+    index: {
+      path: '/layout',
+      icon: LayoutIcon
+    },
+    grid: {
+      path: '/layout/grid',
+    },
+    tiles: {
+      path: '/layout/tiles',
+    }
   },
   styleguide: {
-    index: '/styleguide',
-    headers: '/styleguide/headers',
-    styles: '/styleguide/styles',
+    index: {
+      path: '/styleguide',
+      icon: StyleguideIcon
+    },
+    headers: {
+      path: '/styleguide/headers',
+    },
+    styles: {
+      path: '/styleguide/styles',
+    }
   },
   examples: {
-    index: '/examples',
-    authentication: '/examples/authentication',
-    portfolio: '/examples/portfolio',
-    post: '/examples/post'
+    index: {
+      path: '/examples',
+      icon: ExamplesIcon
+    },
+    authentication: {
+      path: '/examples/authentication',
+    },
+    portfolio: {
+      path: '/examples/portfolio',
+    },
+    post: {
+      path: '/examples/post'
+    }
   }
 }

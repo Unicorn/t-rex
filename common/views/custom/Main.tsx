@@ -5,8 +5,6 @@ import { withRouter } from 'next/router'
 import { WithRouterProps } from 'next/dist/client/with-router'
 
 import ArrowIcon from '@/assets/images/icons/arrow.svg'
-import DesignIcon from '@/assets/images/icons/design.svg'
-import LayoutIcon from '@/assets/images/icons/layout.svg'
 import Logo from '@/assets/images/neue-ui-logo.svg'
 import { routes } from '@/config/routes'
 import Drawer from '@/views/ui/Navigation/Drawer'
@@ -14,11 +12,6 @@ import Content from '../ui/Layout/Content'
 
 interface Props {
   children?: ReactNode
-}
-
-const RouteIcons = {
-  styleguide: DesignIcon,
-  layout: LayoutIcon
 }
 
 class Main extends Component<Props & WithRouterProps> {
@@ -56,16 +49,16 @@ class Main extends Component<Props & WithRouterProps> {
                 component: (
                   <ul className="menu">
                     {Object.keys(routes).map((tab: string) => (
-                      <li key={routes[tab]['index']} className={router.pathname.match(routes[tab]['index']) ? `active tab` : `tab`}>
-                        <button className="link" value={routes[tab]['index']} onClick={this._linkHandler}>
-                          {tab === 'layout' ? <LayoutIcon className="icon" /> : <DesignIcon className="icon" />}
+                      <li key={routes[tab]['index']['route']} className={router.pathname.match(routes[tab].index.path) ? `active tab` : `tab`}>
+                        <button className="link" value={routes[tab].index.path} onClick={this._linkHandler}>
+                          {routes[tab].index.icon(null)}
                           <span>{tab}</span>
                         </button>
 
                         <ul className="pane">
                           {Object.keys(routes[tab]).map(k => k !== 'index' && (
-                            <li key={routes[tab][k]}>
-                              <button className={router.pathname === routes[tab][k] ? 'active link' : 'link'} value={routes[tab][k]} onClick={this._linkHandler}>
+                            <li key={routes[tab][k].path}>
+                              <button className={router.pathname === routes[tab][k].path ? 'active link' : 'link'} value={routes[tab][k].path} onClick={this._linkHandler}>
                                 <span>{k}</span>
                               </button>
                             </li>

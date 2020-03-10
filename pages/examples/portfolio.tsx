@@ -28,7 +28,7 @@ const _renderItem = (item: string, index: number) => {
       }}
     </Tile>,
     <div className="details">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere consequatur voluptas quidem quam cumque, sint illo impedit harum excepturi mollitia a voluptatum sapiente animi consequuntur, est perspiciatis? <Button type="link" onClick={() => router.push(routes.examples.post)}>Read Post</Button></p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere consequatur voluptas quidem quam cumque, sint illo impedit harum excepturi mollitia a voluptatum sapiente animi consequuntur, est perspiciatis? <Button type="link" onClick={() => router.push(routes.examples.post.path)}>Read Post</Button></p>
     </div>
   ]
 }

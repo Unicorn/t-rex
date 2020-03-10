@@ -43,8 +43,6 @@ const _renderTile = (item: ItemProps, index: number) => (
   </Tile>
 )
 
-
-
 export default () => {
   const [_state, _setState] = useState({ hue: 'neutral', padding: '500' })
 

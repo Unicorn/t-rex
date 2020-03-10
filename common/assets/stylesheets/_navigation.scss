@@ -56,8 +56,8 @@
 
     @include breakpoint(sm, up) {
       height: 100vh;
-      position: fixed;
-      width: 90%;
+      // position: fixed;
+      // width: 90%;
     }  
 
     .toggle {
@@ -162,10 +162,10 @@
           background-color: rgba(255, 255, 255, 0.1);
         }
 
-        .icon {
+        svg {
           display: none;
-          max-height: #{$drawer-collapsed-width / 2.25};
-          max-width: #{$drawer-collapsed-width / 2.25};
+          max-height: #{$drawer-collapsed-width / 2.5};
+          max-width: #{$drawer-collapsed-width / 2.5};
           opacity: 0;
           transition: all 1.5s;
         }
@@ -242,7 +242,7 @@
             display: none;
           }
 
-          .icon {
+          svg {
             display: block;
             fill: #fff;
             margin: 0 auto;

@@ -13,8 +13,27 @@
   }
 
   .content {
-    overflow: hidden;
     width: 100%;
+  }
+
+  .hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 0 $s700 0;
+    min-height: 30rem;
+    padding: $s700;
+    position: relative;
+
+    .header {
+      bottom: $s500;
+      position: absolute;
+    }
+
+    &.light {
+      color: $color-primary-100;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    }
   }
 
   .tile {
@@ -79,6 +98,5 @@
         }
       }
     }
-
   }
 }
