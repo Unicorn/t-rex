@@ -2,9 +2,10 @@ import { Provider } from 'react-redux'
 import withRedux from 'next-redux-wrapper'
 import App from 'next/app'
 
-import Main from '@/views/custom/Main'
 import Meta from '@/containers/Meta'
 import { nextStore } from '@/controllers/reduxController'
+import { RootState } from '@/models/app'
+import Main from '@/views/custom/Main'
 
 import '@/assets/stylesheets/app.scss'
 
@@ -16,6 +17,7 @@ class RootApp extends App<Props> {
 
   render() {
     const { Component, pageProps, store } = this.props
+    const { auth } = store.getState() as RootState
 
     return (
       <Provider store={store}>
@@ -24,9 +26,7 @@ class RootApp extends App<Props> {
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Meta>
 
-        <Main>
-          <Component {...pageProps} />
-        </Main>
+        {auth.isLoggedIn ? <Main><Component {...pageProps} /></Main> : <Component {...pageProps} />}
       </Provider>
     )
   }

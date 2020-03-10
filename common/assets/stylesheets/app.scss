@@ -5,6 +5,7 @@
 @import '_colors';
 @import '_grid';
 @import '_html';
+@import '_media';
 @import '_layout';
 @import '_form';
 @import '_alerts';
@@ -18,6 +19,7 @@
   @include neue\_colors;
   @include neue\_grid;
   @include neue\_html;
+  @include neue\_media;
   @include neue\_layout;
   @include neue\_form;
   @include neue\_alerts;

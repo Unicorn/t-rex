@@ -3,6 +3,7 @@ import createSagaMiddleware from 'redux-saga'
 import { alertReducer } from 'horseshoes'
 
 import { rootSaga } from '@/controllers/sagaController'
+import { authReducer } from '@/controllers/authController'
 import { settingReducer } from '@/controllers/settingController'
 import { initialState, RootState } from '@/models/app'
 
@@ -10,6 +11,7 @@ import { initialState, RootState } from '@/models/app'
 
 const rootReducer = combineReducers<RootState>({
   alerts: alertReducer,
+  auth: authReducer,
   settings: settingReducer,
 } as any)
 

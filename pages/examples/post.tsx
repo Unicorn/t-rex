@@ -1,11 +1,12 @@
-import Hero from '@/views/ui/Layout/Hero'
+import Image from '@/views/ui/Media/Image'
 import Header from '@/views/ui/Typography/Header'
+
 
 export default () => (
   <section className="styleguide elements">
-    <Hero image="http://www.unicornagency.com/images/scene/hills-a8af87be.png" mode="light">
+    <Image image="/heros/unicorn.png" theme="light" shadowBlur>
       <Header size="900" Element="h1">Header 1: 900</Header>
-    </Hero>
+    </Image>
 
     <Header size="800" Element="h2">Header 2: 800</Header>
     <p>I'm baby cray ugh lomo swag four loko umami. Hot chicken leggings polaroid fam health goth brunch everyday carry gentrify. Dreamcatcher hexagon blog poutine, artisan +1 street art vape four loko XOXO cold-pressed. Portland put a bird on it ethical unicorn try-hard single-origin coffee +1 raw denim schlitz kogi.</p>
