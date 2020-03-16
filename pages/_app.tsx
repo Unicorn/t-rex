@@ -26,7 +26,7 @@ class RootApp extends App<Props> {
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Meta>
 
-        {auth.isLoggedIn ? <Main><Component {...pageProps} /></Main> : <Component {...pageProps} />}
+        {auth.isLoggedIn ? <Main><Component {...pageProps} /></Main> : <Main><Component {...pageProps} /></Main>}
       </Provider>
     )
   }

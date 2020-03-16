@@ -31,7 +31,8 @@ const Collection: FC<CollectionProps> = ({ items, itemRenderer, display, grid, t
   const styles = {
     collection: {
       display: 'grid',
-      gridTemplateColumns: `repeat(${columnCount}, ${columnWidth}%)`,
+      margin: '2rem 0',
+      gridTemplateColumns: `repeat(${columnCount}, auto)`,
       gridTemplateRows: `repeat(${Math.ceil(items.length / grid.columns)}, auto)`,
       gridRowGap: `${rowGap}`,
       gridColumnGap: `${columnGap || rowGap}`

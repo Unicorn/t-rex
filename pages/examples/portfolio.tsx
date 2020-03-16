@@ -16,7 +16,7 @@ const _renderItem = (item: string, index: number) => {
       {{
         head: {
           component: (
-            <Header size="100">{item} #{index}</Header>
+            <Header size="100"><strong>{item}</strong> <em>#{index}</em></Header>
           ),
           padding: '500'
         },
