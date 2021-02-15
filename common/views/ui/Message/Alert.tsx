@@ -1,7 +1,4 @@
-/**
- * @jsx createElement
- */
-import { createElement, ReactNode, SFC } from 'react'
+import { ReactNode, FC } from 'react'
 import { v4 } from 'uuid'
 import { Alert } from '@/models/alert'
 import CloseIcon from '@/assets/images/icons/close.svg'
@@ -19,7 +16,7 @@ const renderMessages = (messages: readonly string[]): ReactNode => {
   )
 }
 
-const Alert: SFC<AlertProps> = ({ dismissHandler, alert }) => {
+const Alert: FC<AlertProps> = ({ dismissHandler, alert }) => {
   const message = Array.isArray(alert.message) ? renderMessages(alert.message) : alert.message
 
   return (

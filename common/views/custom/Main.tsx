@@ -1,5 +1,4 @@
-/** @jsx createElement **/
-import { createElement, ReactNode, Component, Fragment, SyntheticEvent } from 'react'
+import { ReactNode, Component, Fragment, SyntheticEvent } from 'react'
 import { withRouter } from 'next/router'
 import { WithRouterProps } from 'next/dist/client/with-router'
 

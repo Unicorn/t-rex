@@ -1,7 +1,4 @@
-/**
- * @jsx createElement
- */
-import { createElement, SFC } from 'react'
+import { FC } from 'react'
 import { connect } from 'react-redux'
 import { v4 } from 'uuid'
 import { toArray, deleteAlert } from 'horseshoes'
@@ -17,7 +14,7 @@ export interface Actions {
   readonly _deleteAlert: typeof deleteAlert
 }
 
-const Alerts: SFC<Connected & Actions> = ({ alerts, _deleteAlert }) => {
+const Alerts: FC<Connected & Actions> = ({ alerts, _deleteAlert }) => {
   if (!alerts || alerts.length < 1) { return null }
 
   alerts.forEach(alert => alert.dismissAfter && setTimeout(() => {

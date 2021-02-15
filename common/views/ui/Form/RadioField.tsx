@@ -1,7 +1,4 @@
-/**
- * @jsx createElement
- */
-import { createElement, ReactNode, SFC, SyntheticEvent } from 'react'
+import { ReactNode, FC, SyntheticEvent } from 'react'
 import { OptionsObject, RadioFieldProps } from './types'
 
 const renderRadioOptions = (name: string, selected: string = '', onChange: (e: SyntheticEvent<HTMLInputElement>) => void, options?: OptionsObject): ReactNode => {
@@ -17,7 +14,7 @@ const renderRadioOptions = (name: string, selected: string = '', onChange: (e: S
   ))
 }
 
-const RadioField: SFC<RadioFieldProps> = ({ name, type, label, options, validate, valid, onValidate, onValid, onInvalid, onChange, ...inputProps }) => {
+const RadioField: FC<RadioFieldProps> = ({ name, type, label, options, validate, valid, onValidate, onValid, onInvalid, onChange, ...inputProps }) => {
   const classes = ['field', type, `valid-${valid}`]
   inputProps.value && inputProps.value.length > 0 ? classes.push('not-empty') : classes.push('empty')
 

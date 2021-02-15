@@ -8,6 +8,11 @@ export interface RootState {
   settings: Settings
 }
 
+export interface HydrateAction {
+  type: 'HYDRATE',
+  payload?: RootState
+}
+
 export const initialState: RootState = {
   alerts: initResources<Alert>(),
   auth: {

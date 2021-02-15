@@ -1,5 +1,4 @@
-/** @jsx createElement */
-import { createElement, FC, useState, SyntheticEvent, ReactNode, Fragment } from 'react'
+import { FC, useState, SyntheticEvent, ReactNode, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { createAlert } from 'horseshoes'
 import { v4 } from 'uuid'

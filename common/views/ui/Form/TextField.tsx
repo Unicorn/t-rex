@@ -1,10 +1,7 @@
-/**
- * @jsx createElement
- */
-import { createElement, SFC, SyntheticEvent } from 'react'
+import { FC, SyntheticEvent } from 'react'
 import { TextFieldProps } from './types'
 
-const TextField: SFC<TextFieldProps> = ({ name, type, label, normalize, validate, valid, onValidate, onValid, onInvalid, onChange, ...inputProps }) => {
+const TextField: FC<TextFieldProps> = ({ name, type, label, normalize, validate, valid, onValidate, onValid, onInvalid, onChange, ...inputProps }) => {
   const classes = ['field', type, `valid-${valid}`]
   inputProps.value && inputProps.value.length > 0 ? classes.push('not-empty') : classes.push('empty')
 
