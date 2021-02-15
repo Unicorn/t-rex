@@ -19,7 +19,7 @@ export default () => {
           component: (
             <nav>
               {Object.keys(routes.styleguide).map(key => (
-                <a className={router.pathname === routes.styleguide[key] ? 'active' : ''} href={routes.styleguide[key]}>
+                <a className={router.pathname === routes.styleguide[key].path ? 'active' : ''} href={routes.styleguide[key].path}>
                   {key}
                 </a>
               ))}

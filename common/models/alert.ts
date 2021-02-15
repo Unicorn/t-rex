@@ -1,5 +1,4 @@
 import { Resource } from "horseshoes";
-import { APP_NAME } from "./app";
 
 //
 // Types

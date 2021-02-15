@@ -3,7 +3,7 @@
  */
 import { createElement, ReactNode, SFC } from 'react'
 import { v4 } from 'uuid'
-import { Alert } from '../../models/alert'
+import { Alert } from '@/models/alert'
 import CloseIcon from '@/assets/images/icons/close.svg'
 
 export interface AlertProps {

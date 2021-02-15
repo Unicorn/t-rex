@@ -1,7 +1,7 @@
 import Alert from './Alert';
-import Alerts from './Alerts';
+import AlertsList from './AlertsList';
 
 export default {
   Alert,
-  Alerts,
+  AlertsList,
 };

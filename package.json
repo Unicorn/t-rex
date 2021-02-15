@@ -8,8 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "@auth0/auth0-spa-js": "^1.6.4",
-    "horseshoes": "^0.16.2",
+    "@auth0/auth0-spa-js": "^1.13.6",
+    "horseshoes": "^0.23.1",
     "immer": "^8.0.1",
     "lodash": "^4.17.15",
     "next": "9.3.2",
