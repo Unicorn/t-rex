@@ -1,6 +1,4 @@
-import { FC, ReactNode, useEffect, useState } from 'react'
-// @TODO SizeMe adds a hidden component. Need to remove that.
-import { withSize, SizeMeProps } from 'react-sizeme'
+import { FC, ReactNode } from 'react'
 import { v4 } from 'uuid'
 
 export interface CollectionProps {
@@ -21,12 +19,6 @@ const Collection: FC<CollectionProps> = ({ items, itemRenderer, display, grid, t
 
   let columnCount = grid.columns
   let columnWidth = 100 / grid.columns
-
-  // @TODO SizeMe adds a hidden component. Need to remove that.
-  // if (size.width < 768) {
-  //   columnCount = 1
-  //   columnWidth = 100
-  // }
 
   const styles = {
     collection: {
@@ -59,6 +51,3 @@ Collection.defaultProps = {
 }
 
 export default Collection
-
-// @TODO SizeMe adds a hidden component. Need to remove that.
-// export default withSize({ refreshRate: 1000 })(Collection)
