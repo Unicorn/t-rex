@@ -1,41 +1,40 @@
-const { resolve } = require('path')
-const webpack = require('webpack')
-const withSass = require('@zeit/next-sass')
+// const { resolve } = require('path')
+// const webpack = require('webpack')
 
-module.exports = withSass({
-  webpack: (config, { defaultLoaders }) => {
-    config.resolve.alias['@'] = resolve(__dirname, 'common')
+// module.exports = {
+//   webpack: (config, { defaultLoaders }) => {
+//     config.resolve.alias['@'] = resolve(__dirname, 'common')
 
-    // SVG parsing for SASS
-    config.module.rules.push({
-      test: /\.svg$/,
-      loader: 'url-loader',
-      issuer: {
-        test: /\.s[ac]ss$/i,
-      },
-    })
+//     // SVG parsing for SASS
+//     config.module.rules.push({
+//       test: /\.svg$/,
+//       loader: 'url-loader',
+//       issuer: {
+//         test: /\.s[ac]ss$/i,
+//       },
+//     })
 
-    // SVG as React Components
-    config.module.rules.push({
-      test: /\.svg$/,
-      loader: '@svgr/webpack',
-      issuer: {
-        test: /\.tsx?$/
-      },
-      options: {
-        dimensions: false,
-        svgoConfig: {
-          removeViewBox: false
-        }
-      }
-    })
+//     // SVG as React Components
+//     config.module.rules.push({
+//       test: /\.svg$/,
+//       loader: '@svgr/webpack',
+//       issuer: {
+//         test: /\.tsx?$/
+//       },
+//       options: {
+//         dimensions: false,
+//         svgoConfig: {
+//           removeViewBox: false
+//         }
+//       }
+//     })
 
-    config.plugins.push(
-      new webpack.ProvidePlugin({
-        'fetch': 'isomorphic-unfetch'
-      })
-    )
+//     config.plugins.push(
+//       new webpack.ProvidePlugin({
+//         'fetch': 'isomorphic-unfetch'
+//       })
+//     )
 
-    return config
-  },
-})
+//     return config
+//   },
+// }
