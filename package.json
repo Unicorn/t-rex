@@ -14,7 +14,7 @@
     "@emotion/styled": "^11.1.5",
     "framer-motion": "^3.3.0",
     "horseshoes": "^0.23.1",
-    "immer": "^8.0.1",
+    "immer": "^9.0.6",
     "lodash": "^4.17.20",
     "next": "10.0.6",
     "next-redux-wrapper": "^6.0.2",
